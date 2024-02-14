@@ -1,15 +1,16 @@
 [project]
-name = "sslpsk-pmd3"
-description = "sslpsk fork for pymobiledevice3"
+name = "sslpsk"
+description = "sslpsk"
 readme = "README.md"
 requires-python = ">=3.8"
 license = { file = "LICENSE" }
 keywords = ["ssl", "tls", "psk", "tls-psk", "preshared key"]
 authors = [
-    { name = "doronz88", email = "doron88@gmail.com" }
+    { name = "doronz88", email = "doron88@gmail.com" },
+    { name = "Kuba Szczodrzyński", email = "kuba@szczodrzynski.pl" }
 ]
 maintainers = [
-    { name = "doronz88", email = "doron88@gmail.com" }
+    { name = "beremiz", email = "github.actions@beremiz.fr" }
 ]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -27,17 +28,16 @@ dynamic = ["version"]
 test = ["pytest"]
 
 [project.urls]
-"Homepage" = "https://github.com/doronz88/sslpsk-pmd3"
-"Bug Reports" = "https://github.com/doronz88/sslpsk-pmd3/issues"
+"Homepage" = "https://github.com/beremiz/sslpsk"
 
 [tool.setuptools.packages.find]
 exclude = ["docs*", "tests*"]
 
 [tool.setuptools.dynamic]
-version = {attr = "sslpsk_pmd3._version.__version__"}
+version = {attr = "sslpsk._version.__version__"}
 
 [tool.setuptools_scm]
-version_file = "sslpsk_pmd3/_version.py"
+version_file = "sslpsk/_version.py"
 
 [build-system]
 requires = ["setuptools>=43.0.0", "setuptools_scm>=8", "wheel"]
